@@ -11,7 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 ## Description
-A new Flutter package that provides native iOS Color Picker cloned UI for all platforms, with iOS Native color Picker option for iOS only 
+This update resolves a problem where a dialog either did not open correctly or was misaligned when displayed on iPad devices. The fix ensures consistent behavior across platforms, particularly addressing iPad-specific layout or modal presentation quirks.
 
 ## Supported Platforms
 
