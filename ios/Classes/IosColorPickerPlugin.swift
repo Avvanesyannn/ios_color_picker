@@ -42,6 +42,16 @@ public class IosColorPickerPlugin: NSObject, FlutterPlugin, FlutterStreamHandler
         colorPicker.delegate = self
 
         if let rootViewController = UIApplication.shared.delegate?.window??.rootViewController {
+            if let popover = colorPicker.popoverPresentationController {
+                popover.sourceView = rootViewController.view
+                popover.sourceRect = CGRect(
+                    x: rootViewController.view.bounds.midX,
+                    y: rootViewController.view.bounds.midY,
+                    width: 0,
+                    height: 0
+                )
+                popover.permittedArrowDirections = []
+            }
             rootViewController.present(colorPicker, animated: true, completion: nil)
         }
 
